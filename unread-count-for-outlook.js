@@ -12,7 +12,9 @@ window.addEventListener("load", (event) => {
         let iElements = document.getElementsByTagName('i');
         for (let i = 0; i < iElements.length; i++) {
             let iElement = iElements[i];
-            if (iElement.attributes['data-icon-name'] && iElement.attributes['data-icon-name'].value === 'Inbox') {
+
+
+            if (iElement.attributes['data-icon-name'] && (iElement.attributes['data-icon-name'].value === 'Inbox' || iElement.attributes['data-icon-name'].value === 'MailInboxRegular')) {
                 let numericValue = findSpanWithNumber(iElement.parentElement.parentElement);
                 if (numericValue)
                     favicon.badge(numericValue);
